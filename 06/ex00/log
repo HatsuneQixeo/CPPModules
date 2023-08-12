@@ -1,0 +1,651 @@
+Test: Alpha
+./convert a
+char: 'a'
+int: 97
+float: 97.0f
+double: 97.0
+
+./convert b
+char: 'b'
+int: 98
+float: 98.0f
+double: 98.0
+
+./convert c
+char: 'c'
+int: 99
+float: 99.0f
+double: 99.0
+
+./convert d
+char: 'd'
+int: 100
+float: 100.0f
+double: 100.0
+
+./convert e
+char: 'e'
+int: 101
+float: 101.0f
+double: 101.0
+
+./convert f
+char: 'f'
+int: 102
+float: 102.0f
+double: 102.0
+
+./convert g
+char: 'g'
+int: 103
+float: 103.0f
+double: 103.0
+
+./convert h
+char: 'h'
+int: 104
+float: 104.0f
+double: 104.0
+
+./convert i
+char: 'i'
+int: 105
+float: 105.0f
+double: 105.0
+
+./convert j
+char: 'j'
+int: 106
+float: 106.0f
+double: 106.0
+
+./convert k
+char: 'k'
+int: 107
+float: 107.0f
+double: 107.0
+
+./convert l
+char: 'l'
+int: 108
+float: 108.0f
+double: 108.0
+
+./convert m
+char: 'm'
+int: 109
+float: 109.0f
+double: 109.0
+
+./convert n
+char: 'n'
+int: 110
+float: 110.0f
+double: 110.0
+
+./convert o
+char: 'o'
+int: 111
+float: 111.0f
+double: 111.0
+
+./convert p
+char: 'p'
+int: 112
+float: 112.0f
+double: 112.0
+
+./convert q
+char: 'q'
+int: 113
+float: 113.0f
+double: 113.0
+
+./convert r
+char: 'r'
+int: 114
+float: 114.0f
+double: 114.0
+
+./convert s
+char: 's'
+int: 115
+float: 115.0f
+double: 115.0
+
+./convert t
+char: 't'
+int: 116
+float: 116.0f
+double: 116.0
+
+./convert u
+char: 'u'
+int: 117
+float: 117.0f
+double: 117.0
+
+./convert v
+char: 'v'
+int: 118
+float: 118.0f
+double: 118.0
+
+./convert w
+char: 'w'
+int: 119
+float: 119.0f
+double: 119.0
+
+./convert x
+char: 'x'
+int: 120
+float: 120.0f
+double: 120.0
+
+./convert y
+char: 'y'
+int: 121
+float: 121.0f
+double: 121.0
+
+./convert z
+char: 'z'
+int: 122
+float: 122.0f
+double: 122.0
+
+./convert A
+char: 'A'
+int: 65
+float: 65.0f
+double: 65.0
+
+./convert B
+char: 'B'
+int: 66
+float: 66.0f
+double: 66.0
+
+./convert C
+char: 'C'
+int: 67
+float: 67.0f
+double: 67.0
+
+./convert D
+char: 'D'
+int: 68
+float: 68.0f
+double: 68.0
+
+./convert E
+char: 'E'
+int: 69
+float: 69.0f
+double: 69.0
+
+./convert F
+char: 'F'
+int: 70
+float: 70.0f
+double: 70.0
+
+./convert G
+char: 'G'
+int: 71
+float: 71.0f
+double: 71.0
+
+./convert H
+char: 'H'
+int: 72
+float: 72.0f
+double: 72.0
+
+./convert I
+char: 'I'
+int: 73
+float: 73.0f
+double: 73.0
+
+./convert J
+char: 'J'
+int: 74
+float: 74.0f
+double: 74.0
+
+./convert K
+char: 'K'
+int: 75
+float: 75.0f
+double: 75.0
+
+./convert L
+char: 'L'
+int: 76
+float: 76.0f
+double: 76.0
+
+./convert M
+char: 'M'
+int: 77
+float: 77.0f
+double: 77.0
+
+./convert N
+char: 'N'
+int: 78
+float: 78.0f
+double: 78.0
+
+./convert O
+char: 'O'
+int: 79
+float: 79.0f
+double: 79.0
+
+./convert P
+char: 'P'
+int: 80
+float: 80.0f
+double: 80.0
+
+./convert Q
+char: 'Q'
+int: 81
+float: 81.0f
+double: 81.0
+
+./convert R
+char: 'R'
+int: 82
+float: 82.0f
+double: 82.0
+
+./convert S
+char: 'S'
+int: 83
+float: 83.0f
+double: 83.0
+
+./convert T
+char: 'T'
+int: 84
+float: 84.0f
+double: 84.0
+
+./convert U
+char: 'U'
+int: 85
+float: 85.0f
+double: 85.0
+
+./convert V
+char: 'V'
+int: 86
+float: 86.0f
+double: 86.0
+
+./convert W
+char: 'W'
+int: 87
+float: 87.0f
+double: 87.0
+
+./convert X
+char: 'X'
+int: 88
+float: 88.0f
+double: 88.0
+
+./convert Y
+char: 'Y'
+int: 89
+float: 89.0f
+double: 89.0
+
+./convert Z
+char: 'Z'
+int: 90
+float: 90.0f
+double: 90.0
+
+
+Test: Special
+./convert ,
+char: ','
+int: 44
+float: 44.0f
+double: 44.0
+
+./convert .
+char: '.'
+int: 46
+float: 46.0f
+double: 46.0
+
+./convert ;
+char: ';'
+int: 59
+float: 59.0f
+double: 59.0
+
+./convert :
+char: ':'
+int: 58
+float: 58.0f
+double: 58.0
+
+./convert !
+char: '!'
+int: 33
+float: 33.0f
+double: 33.0
+
+./convert ?
+char: '?'
+int: 63
+float: 63.0f
+double: 63.0
+
+./convert "
+char: '"'
+int: 34
+float: 34.0f
+double: 34.0
+
+./convert '
+char: '''
+int: 39
+float: 39.0f
+double: 39.0
+
+./convert (
+char: '('
+int: 40
+float: 40.0f
+double: 40.0
+
+./convert )
+char: ')'
+int: 41
+float: 41.0f
+double: 41.0
+
+./convert [
+char: '['
+int: 91
+float: 91.0f
+double: 91.0
+
+./convert ]
+char: ']'
+int: 93
+float: 93.0f
+double: 93.0
+
+./convert {
+char: '{'
+int: 123
+float: 123.0f
+double: 123.0
+
+./convert }
+char: '}'
+int: 125
+float: 125.0f
+double: 125.0
+
+./convert \
+char: '\'
+int: 92
+float: 92.0f
+double: 92.0
+
+./convert /
+char: '/'
+int: 47
+float: 47.0f
+double: 47.0
+
+./convert |
+char: '|'
+int: 124
+float: 124.0f
+double: 124.0
+
+./convert <
+char: '<'
+int: 60
+float: 60.0f
+double: 60.0
+
+./convert >
+char: '>'
+int: 62
+float: 62.0f
+double: 62.0
+
+./convert ~
+char: '~'
+int: 126
+float: 126.0f
+double: 126.0
+
+./convert `
+char: '`'
+int: 96
+float: 96.0f
+double: 96.0
+
+./convert @
+char: '@'
+int: 64
+float: 64.0f
+double: 64.0
+
+./convert #
+char: '#'
+int: 35
+float: 35.0f
+double: 35.0
+
+./convert $
+char: '$'
+int: 36
+float: 36.0f
+double: 36.0
+
+./convert %
+char: '%'
+int: 37
+float: 37.0f
+double: 37.0
+
+./convert ^
+char: '^'
+int: 94
+float: 94.0f
+double: 94.0
+
+./convert &
+char: '&'
+int: 38
+float: 38.0f
+double: 38.0
+
+./convert *
+char: '*'
+int: 42
+float: 42.0f
+double: 42.0
+
+./convert _
+char: '_'
+int: 95
+float: 95.0f
+double: 95.0
+
+./convert =
+char: '='
+int: 61
+float: 61.0f
+double: 61.0
+
+./convert  
+char: ' '
+int: 32
+float: 32.0f
+double: 32.0
+
+
+Test: Numeric:
+Integer
+./convert 831
+char: Non displayable
+int: 831
+float: 831.0f
+double: 831.0
+
+./convert +831
+Not an integer: +831
+
+./convert -831
+Not an integer: -831
+
+
+Double
+./convert 831.831
+char: Non displayable
+int: 831
+float: 831.8f
+double: 831.8
+
+./convert +831.831
+Not an integer: +831.831
+
+./convert -831.831
+Not an integer: -831.831
+
+
+Float
+./convert 831.831f
+char: Non displayable
+int: 831
+float: 831.8f
+double: 831.8
+
+./convert +831.831f
+Not an integer: +831.831f
+
+./convert -831.831f
+Not an integer: -831.831f
+
+
+Test: Sign
+./convert +
+char: '+'
+int: 43
+float: 43.0f
+double: 43.0
+
+./convert -
+char: '-'
+int: 45
+float: 45.0f
+double: 45.0
+
+./convert +0
+Not an integer: +0
+
+./convert -0
+Not an integer: -0
+
+
+Test: InvalidSign
+./convert +-01
+Not an integer: +-01
+
+./convert -+01
+Not an integer: -+01
+
+
+Test: INT_MIN
+./convert -2147483648
+Not an integer: -2147483648
+
+
+Test: INT_MAX
+./convert 2147483647
+char: Non displayable
+int: 2147483647
+float: 2147483648.0f
+double: 2147483647.0
+
+
+Test: Integer Overflow
+./convert 2147483648
+char: Non displayable
+int: Overflow
+float: 2147483648.0f
+double: 2147483648.0
+
+
+Test: Integer Underflow
+./convert -2147483649
+Not an integer: -2147483649
+
+
+Tests: Invalid
+./convert 
+Not an integer: 
+
+./convert Hatsune Miku
+Not an integer: Hatsune Miku
+
+./convert 831Miku
+Not an integer: 831Miku
+
+./convert Miku831
+Not an integer: Miku831
+
+
+Test: Psuedo Literal
+./convert -inf
+char: impossible
+int: impossible
+float: -inff
+double: -inf
+
+./convert +inf
+char: impossible
+int: impossible
+float: +inff
+double: +inf
+
+./convert nan
+char: impossible
+int: impossible
+float: nanf
+double: nan
+
+./convert -inff
+char: impossible
+int: impossible
+float: -inff
+double: -inf
+
+./convert +inff
+char: impossible
+int: impossible
+float: +inff
+double: +inf
+
+./convert nanf
+char: impossible
+int: impossible
+float: nanf
+double: nan
+
+
