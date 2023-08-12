@@ -39,6 +39,18 @@ class Span
 
 };
 
+template <typename It>
+void	Span::addNumber(const It begin, const It end)
+{
+	if (begin == end)
+		return ;
+	if ((this->storage.end() - this->view_end) < (end - begin))
+		throw std::length_error("Exceed the Maximum Capacity");
+	for (It it = begin; it != end; it++)
+		*this->view_end++ = *it;
+	this->sorted = false;
+}
+
 /* Storage Utils */
 void			storage_shuffle(Span::Storage &storage);
 Span::Storage	storage_createRand(const unsigned int size, const unsigned int randMax = RAND_MAX);

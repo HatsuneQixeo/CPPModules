@@ -45,6 +45,5 @@ std::ostream	&operator<<(std::ostream &stream, const Span::Storage &storage)
 			stream << ", ";
 		stream << *it;
 	}
-	stream << std::endl;
 	return (stream);
 }

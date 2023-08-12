@@ -56,18 +56,6 @@ void	Span::addNumber(const int add)
 	this->sorted = false;
 }
 
-template <typename It>
-void	Span::addNumber(const It begin, const It end)
-{
-	if (begin == end)
-		return ;
-	if ((this->storage.end() - this->view_end) < (end - begin))
-		throw std::length_error("Exceed the Maximum Capacity");
-	for (It it = begin; it != end; it++)
-		*this->view_end++ = *it;
-	this->sorted = false;
-}
-
 unsigned int	Span::shortestSpan(void)
 {
 	unsigned int	diffMin = this->longestSpan();

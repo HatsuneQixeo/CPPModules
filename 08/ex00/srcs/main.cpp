@@ -1,8 +1,8 @@
-#include "easyfind.hpp"
+#include <iostream>
 #include <array>
 #include <vector>
 #include <deque>
-#include <numeric>
+#include "easyfind.hpp"
 
 template <typename T>
 void	easyTest(T &container, const int find)

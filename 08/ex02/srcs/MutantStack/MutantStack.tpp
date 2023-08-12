@@ -23,7 +23,6 @@ MutantStack<T>::~MutantStack(void)
 template <typename T>
 MutantStack<T>	&MutantStack<T>::operator=(const MutantStack<T> &ref)
 {
-	/* Copy assignment */
 	std::stack<T>::operator=(ref);
 	return (*this);
 }

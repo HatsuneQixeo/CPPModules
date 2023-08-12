@@ -1,13 +1,5 @@
 #include "MutantStack.hpp"
 #include <stack>
-#include <vector>
-
-/**
- * @brief Should I make a generic test function for it?
- * With container and push function as template
- * 
- * @return int 
- */
 
 int	main(void)
 {
