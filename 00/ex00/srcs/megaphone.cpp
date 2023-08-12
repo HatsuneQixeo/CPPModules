@@ -1,5 +1,12 @@
 #include <iostream>
 
+std::string	megaphone(std::string str)
+{
+	for (unsigned int i = 0; i < str.size(); i++)
+		str[i] = toupper(str[i]);
+	return (str);
+}
+
 int	main(int argc, char **argv)
 {
 	std::string	output;
@@ -7,8 +14,9 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		output.assign("* loud and unbearable feedback noise *");
 	else
-		while (*++argv)
+	{
+		while (*++argv != NULL)
 			output.append(*argv);
-	std::transform(output.begin(), output.end(), output.begin(), ::toupper);
-	std::cout << output << std::endl;
+	}
+	std::cout << megaphone(output) << std::endl;
 }

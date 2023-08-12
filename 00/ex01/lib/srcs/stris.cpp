@@ -1,5 +1,10 @@
 #include "stris.hpp"
 
+/**
+ * Look at all these impure functions man,
+ * nobody would ever uses this library if I ended up making it a thing
+ */
+
 bool	stris::whatever(const std::string &str)
 {
 	return (true);
@@ -10,25 +15,26 @@ bool	stris::notempty(const std::string &str)
 {
 	if (str.empty())
 		std::cout << "This field could not be left empty" << std::endl;
-	return (str.empty() == false);
+	else
+		return (true);
+	return (false);
 }
 
 bool	stris::numeric(const std::string &str)
 {
-	int	i;
+	unsigned int	i = 0;
 
-	i = 0;
 	if (!stris::notempty(str))
 		return (false);
-	while (isspace(str[i]))
-		i++;
-	if (strchr("+-", str[i]))
-		i++;
+	i = str.find_first_not_of(" \t\n\r\v\f");
+	i += ((str[i] == '+') || (str[i] == '-'));
 	if (str[i] == '\0')
-		std::cout << "Missing digit" << std::endl;
-	while (isdigit(str[i]))
-		i++;
-	if (str[i])
+	{
+		std::cout << "Missing value" << std::endl;
+		return (false);
+	}
+	i = str.find_first_not_of("0123456789", i);
+	if (str[i] != '\0')
 		std::cout << "Containing something else other than digit" << std::endl;
 	return (str[i] == '\0');
 }
@@ -59,11 +65,10 @@ bool	stris::phonenumber(const std::string &str)
 
 static bool	phonenumber_format(const std::string &str)
 {
-	int	i;
+	unsigned int	i = 0;
 
 	if (str.empty())
 		return (false);
-	i = 0;
 	while (str[i] != '\0'
 		&& (isspace(str[i]) || isdigit(str[i]) || strchr("+-", str[i])))
 		i++;
@@ -79,7 +84,7 @@ bool	stris_numberrange(const std::string &type, const std::string &str, int min,
 	else if (stris::numeric(str))
 	{
 		nbr = atoi(str.data());
-		if (nbr >= min && nbr <= max)
+		if (min <= nbr && nbr <= max)
 			return (true);
 		std::cout << nbr << " is not a valid " << type << std::endl;
 		std::cout << "Please enter a value within " << min << " - " << max << ')' << std::endl;
@@ -87,12 +92,18 @@ bool	stris_numberrange(const std::string &type, const std::string &str, int min,
 	return (false);
 }
 
+std::string	miniphone(std::string str)
+{
+	for (unsigned int i = 0; i < str.size(); i++)
+		str[i] = tolower(str[i]);
+	return (str);
+}
+
 bool	stris::onlymiku(const std::string &str)
 {
-	std::string	lower(str);
-	const bool	isMiku = (lower == "hatsune miku");
+	const std::string	lower = miniphone(str);
+	const bool			isMiku = (lower == "hatsune miku");
 
-	std::transform(lower.begin(), lower.end(), lower.begin(), ::tolower);
 	if (str == "HATSUNE MIKU")
 		std::cout << "ソフトウェアを怖がらせるしないでください!" << std::endl;
 	if (isMiku)

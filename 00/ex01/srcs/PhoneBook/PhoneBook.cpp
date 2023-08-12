@@ -23,6 +23,12 @@ void	PhoneBook::open(void)
 
 void	PhoneBook::new_contact(void)
 {
+	/*
+		Using static variable like this could be a little problematic in practice,
+		but this is just a placeholder for a feature that has not been introduced yet in this module.
+
+		Spoiler: it's called constructor.
+	*/
 	static int	i = -1;
 
 	this->contacts[++i %= PhoneBook::SIZE].add();
@@ -34,7 +40,7 @@ void	PhoneBook::search(void) const
 	this->contacts[std::stoi(prompt(ENTER(INDEX), PhoneBook::stris_bookpage))].display();
 }
 
-static std::string	rightalign(const std::string &str, unsigned long width = 10, char pad = ' ')
+static std::string	rightalign(const std::string &str, const unsigned long width = 10, const char pad = ' ')
 {
 	const size_t	size = str.size();
 
