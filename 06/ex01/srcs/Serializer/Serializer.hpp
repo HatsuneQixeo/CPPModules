@@ -6,21 +6,12 @@
 class Serializer
 {
 	private:
-		/* Constructor && Destructor */
+		Serializer(void);
 		Serializer(const Serializer &ref);
 		~Serializer(void);
-
-		/* OperatorOverload */
 		Serializer	&operator=(const Serializer &ref);
+
 	public:
-		/* Constructor && Destructor */
-		Serializer(void);
-
-
-		/* Getters */
-
-
-		/* MemberFunctions */
 		static uintptr_t	serialize(Data *ptr);
 		static Data			*deserialize(uintptr_t raw);
 };

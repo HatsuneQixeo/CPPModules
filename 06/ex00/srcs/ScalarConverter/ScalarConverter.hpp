@@ -7,8 +7,10 @@
 class ScalarConverter
 {
 	private:
-		/* Constructor */
+		/* Constructor && Destructor */
+		ScalarConverter(void);
 		ScalarConverter(const ScalarConverter &ref);
+		~ScalarConverter(void);
 
 		/* OperatorOverload */
 		ScalarConverter	&operator=(const ScalarConverter &ref);
@@ -18,11 +20,6 @@ class ScalarConverter
 		static void	logAll(const double value);
 
 	public:
-		/* Constructor && Destructor */
-		ScalarConverter(void);
-		~ScalarConverter(void);
-
-
 		/* MemberFunctions */
 		static void	convert(const std::string &str);
 		template <typename T, typename V>

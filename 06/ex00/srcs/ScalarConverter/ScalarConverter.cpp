@@ -68,8 +68,9 @@ bool	ScalarConverter::isNumeric(std::string str)
 
 	if (decimal_point == std::string::npos)
 		return (strisNumeric(str));
-	return (strisNumeric(str.substr(0, decimal_point))
-		&& strisNumeric(str.substr(decimal_point + 1)));
+	else
+		return (strisNumeric(str.substr(0, decimal_point))
+			&& strisNumeric(str.substr(decimal_point + 1)));
 }
 
 void	ScalarConverter::logAll(const double value)
