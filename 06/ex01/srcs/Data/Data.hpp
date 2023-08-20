@@ -8,6 +8,7 @@ class Data
 	private:
 		unsigned int	data1;
 		unsigned int	data2;
+
 	public:
 		/* Constructor && Destructor */
 		Data(unsigned int data1, unsigned int data2);
@@ -20,9 +21,6 @@ class Data
 		/* Getters */
 		unsigned int	getData1(void) const;
 		unsigned int	getData2(void) const;
-
-		/* MemberFunctions */
-
 };
 
 std::ostream	&operator<<(std::ostream &stream, const Data &data);

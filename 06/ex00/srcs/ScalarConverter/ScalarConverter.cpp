@@ -44,19 +44,18 @@ bool	ScalarConverter::isNumeric(std::string str)
 	/* std::string::find_first_not_of is gonna return std::string::npos if the string is empty */
 	if (str.empty())
 		return (false);
-	/* Exclude the whitespace prefix */
-	str.erase(0, str.find_first_not_of(" \t"));
-	/* Exclude the whitespace suffix */
-	str.erase(str.find_last_not_of(" \t") + 1);
+	/* Exclude the leading and trailing whitespaces */
+	str.erase(0, str.find_first_not_of(" \t"))
+		.erase(str.find_last_not_of(" \t") + 1);
 	/* Case Insensitive */
 	strToLower(str);
 	/* Exception */
 	if (str == "nan" || str == "nanf")
-		throw NaNException();
+		throw (NaNException());
 	else if (str == "+inf" || str == "+inff")
-		throw PositiveInfinityException();
+		throw (PositiveInfinityException());
 	else if (str == "-inf" || str == "-inff")
-		throw NegativeInfinityException();
+		throw (NegativeInfinityException());
 	/* Terminate the float suffix */
 	if (str.back() == 'f')
 		str.pop_back();

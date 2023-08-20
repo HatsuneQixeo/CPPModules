@@ -36,16 +36,10 @@ unsigned int	Data::getData2(void) const
 }
 
 
-
+/* Log */
 std::ostream	&operator<<(std::ostream &stream, const Data &data)
 {
 	stream << "data1: " << data.getData1() 
-		<< " data2: " << data.getData2();
+		<< ", data2: " << data.getData2();
 	return (stream);
 }
-
-
-
-/* MemberFunctions */
-
-
