@@ -42,7 +42,6 @@ typename MutantStack<T>::iterator	MutantStack<T>::end(void)
 }
 
 
-
 /* MemberFunctions */
 
 

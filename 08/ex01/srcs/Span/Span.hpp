@@ -4,21 +4,21 @@
 # include <iostream>
 # include <algorithm>
 # include <vector>
-# include <numeric>
+
 class Span
 {
 	public:
 		typedef std::vector<int>	Storage;
+		typedef Storage::value_type	value_type;
 
 	private:
 		Storage				storage;
 		Storage::iterator	view_begin;
 		Storage::iterator	view_end;
-		bool				sorted;
 
 	public:
 		/* Constructor && Destructor */
-		Span(const unsigned int N = 0);
+		explicit Span(const unsigned int N = 0);
 		Span(const Span &ref);
 		~Span(void);
 
@@ -30,32 +30,29 @@ class Span
 		unsigned int	size(void) const;
 
 		/* MemberFunctions */
-		void			sort(void);
-		void			addNumber(const int add);
-		template <typename It>
-		void			addNumber(const It begin, const It end);
-		unsigned int	shortestSpan(void);
-		unsigned int	longestSpan(void);
+		void			addNumber(const value_type add);
+		template <typename Iterator>
+		void			addNumber(const Iterator begin, const Iterator end);
+		unsigned int	shortestSpan(void) const;
+		unsigned int	longestSpan(void) const;
 
 };
 
-template <typename It>
-void	Span::addNumber(const It begin, const It end)
+template <typename Iterator>
+void	Span::addNumber(const Iterator begin, const Iterator end)
 {
-	if (begin == end)
+	const size_t	insert_size = std::distance(begin, end);
+
+	if (insert_size == 0)
 		return ;
-	if ((this->storage.end() - this->view_end) < (end - begin))
+	if (this->capacity() - this->size() < insert_size)
 		throw std::length_error("Exceed the Maximum Capacity");
-	for (It it = begin; it != end; it++)
-		*this->view_end++ = *it;
-	this->sorted = false;
+	std::copy(begin, end, this->view_end);
+	this->view_end += insert_size;
 }
 
 /* Storage Utils */
-void			storage_shuffle(Span::Storage &storage);
 Span::Storage	storage_createRand(const unsigned int size, const unsigned int randMax = RAND_MAX);
-Span::Storage	storage_createAscend(const unsigned int size, const unsigned int multiply = 1);
-void			storage_ShortestAndLongest(Span::Storage storage, int &shortest, int &longest);
 std::ostream	&operator<<(std::ostream &stream, const Span::Storage &storage);
 
 #endif
