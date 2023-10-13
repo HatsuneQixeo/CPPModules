@@ -81,22 +81,18 @@ unsigned int	Array<T>::size(void) const
 
 /* MemberFunctions */
 template <typename T>
-void	Array<T>::resize(unsigned int newSize)
+void	Array<T>::resize(unsigned int new_size)
 {
-	T	*tmp;
-
-	if (this->length == newSize)
+	if (this->length == new_size)
 		return ;
-	{
-		const unsigned int	lenCopy = ((newSize > this->length) ? this->length : newSize);
+	const unsigned int	len_copy = std::min(new_size, this->length);
+	T					*tmp = new T[new_size];
 
-		tmp = new T[newSize];
-		for (unsigned int i = 0; i < lenCopy; i++)
-			tmp[i] = this->data[i];
-	}
+	for (unsigned int i = 0; i < len_copy; i++)
+		tmp[i] = this->data[i];
 	this->clear();
-	this->length = newSize;
 	this->data = tmp;
+	this->length = new_size;
 }
 
 template <typename T>
