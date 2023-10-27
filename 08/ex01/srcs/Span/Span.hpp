@@ -5,16 +5,11 @@
 # include <algorithm>
 # include <vector>
 
-class Span
+class Span: private std::vector<int>
 {
 	public:
-		typedef std::vector<int>	Storage;
-		typedef Storage::value_type	value_type;
-
-	private:
-		Storage				storage;
-		Storage::iterator	view_begin;
-		Storage::iterator	view_end;
+		typedef std::vector<int>			container_type;
+		typedef container_type::value_type	value_type;
 
 	public:
 		/* Constructor && Destructor */
@@ -26,8 +21,8 @@ class Span
 		Span	&operator=(const Span &ref);
 
 		/* Getters */
-		unsigned int	capacity(void) const;
-		unsigned int	size(void) const;
+		using container_type::size;
+		using container_type::capacity;
 
 		/* MemberFunctions */
 		void			addNumber(const value_type add);
@@ -47,12 +42,11 @@ void	Span::addNumber(const Iterator begin, const Iterator end)
 		return ;
 	if (this->capacity() - this->size() < insert_size)
 		throw std::length_error("Exceed the Maximum Capacity");
-	std::copy(begin, end, this->view_end);
-	this->view_end += insert_size;
+	this->insert(this->end(), begin, end);
 }
 
 /* Storage Utils */
-Span::Storage	storage_createRand(const unsigned int size, const unsigned int randMax = RAND_MAX);
-std::ostream	&operator<<(std::ostream &stream, const Span::Storage &storage);
+Span::container_type	storage_createRand(const unsigned int size, const unsigned int randMax = RAND_MAX);
+std::ostream	&operator<<(std::ostream &stream, const Span::container_type &storage);
 
 #endif

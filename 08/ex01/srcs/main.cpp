@@ -1,6 +1,6 @@
 #include "Span.hpp"
 
-void	showSpan(Span &span)
+void	showSpan(const Span &span)
 {
 	std::cout << "Shortest: " << span.shortestSpan() << std::endl;
 	std::cout << "Longest : " << span.longestSpan() << std::endl;
@@ -83,10 +83,10 @@ void	testException(const unsigned int size)
 	std::cout << std::endl;
 }
 
-void	testNormal(Span::Storage storage)
+void	testNormal(Span::container_type storage)
 {
 	if (storage.size() < 2)
-		throw std::runtime_error("TestNormal is not meant to handle any exception");
+		throw std::invalid_argument("TestNormal is not meant to handle any exception");
 	Span	span(storage.size());
 
 	std::cout << "Test Normal" << '\n';
@@ -107,12 +107,12 @@ int	main(void)
 #if 1
 		subjectTest();
 #endif
-#if 0 /* Normal Test */
+#if 1 /* Normal Test */
 		testNormal(storage_createRand(10, 831));
 		testNegative();
 		testMinMax();
 #endif
-#if 0/* Exception test */
+#if 1/* Exception test */
 		testException(0);
 		testException(1);
 		testException(2);
