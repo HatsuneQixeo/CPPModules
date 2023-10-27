@@ -30,7 +30,7 @@ namespace ansi
 template <typename T>
 void	easyTest(T &container, const int find)
 {
-	const T::iterator	it_find = easyfind(container, find);
+	const typename T::iterator	it_find = easyfind(container, find);
 
 	std::cout << ansi::yellow << std::setw(2) << find << ": ";
 	if (it_find != container.end())
