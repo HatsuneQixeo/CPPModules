@@ -1,11 +1,7 @@
-#ifndef MUTANTSTACK_HPP
-# define MUTANTSTACK_HPP
+#ifndef MUTANT_STACK_HPP
+# define MUTANT_STACK_HPP
 
-# include <iostream>
 # include <stack>
-# include <iterator>
-# include <vector>
-# include <deque>
 
 template <typename T>
 class MutantStack: public std::stack<T>
@@ -18,15 +14,15 @@ class MutantStack: public std::stack<T>
 	public:
 		/* Constructor && Destructor */
 		MutantStack(void);
-		MutantStack(const MutantStack<T> &ref);
+		MutantStack(const MutantStack &ref);
 		~MutantStack(void);
 
 		/* OperatorOverload */
-		MutantStack<T>	&operator=(const MutantStack<T> &ref);
+		MutantStack	&operator=(const MutantStack &ref);
 
 		/* Getters */
-		MutantStack<T>::iterator	begin(void);
-		MutantStack<T>::iterator	end(void);
+		MutantStack::iterator	begin(void);
+		MutantStack::iterator	end(void);
 
 
 		/* MemberFunctions */

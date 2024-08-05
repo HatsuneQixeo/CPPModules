@@ -41,9 +41,9 @@ unsigned int	Span::shortestSpan(void) const
 	std::vector<value_type>	sorted(this->begin(), this->end());
 	std::sort(sorted.begin(), sorted.end());
 
-	unsigned int	min_diff = sorted.back() - sorted.front();
+	unsigned int	min_diff = sorted[1] - sorted[0];
 
-	for (std::vector<value_type>::iterator it = sorted.begin() + 1, end = sorted.end();
+	for (std::vector<value_type>::iterator it = sorted.begin() + 2, end = sorted.end();
 		it != end;
 		++it)
 		min_diff = std::min<unsigned int>(*it - *(it - 1), min_diff);

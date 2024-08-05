@@ -1,5 +1,5 @@
-#ifndef MUTANTSTACK_TPP
-# define MUTANTSTACK_TPP
+#ifndef MUTANT_STACK_TPP
+# define MUTANT_STACK_TPP
 
 # include "MutantStack.hpp"
 
@@ -9,7 +9,7 @@ MutantStack<T>::MutantStack(void)
 {}
 
 template <typename T>
-MutantStack<T>::MutantStack(const MutantStack<T> &ref)
+MutantStack<T>::MutantStack(const MutantStack &ref)
 {
 	*this = ref;
 }
@@ -21,7 +21,7 @@ MutantStack<T>::~MutantStack(void)
 
 /* Operator Overload */
 template <typename T>
-MutantStack<T>	&MutantStack<T>::operator=(const MutantStack<T> &ref)
+MutantStack<T>	&MutantStack<T>::operator=(const MutantStack &ref)
 {
 	std::stack<T>::operator=(ref);
 	return (*this);

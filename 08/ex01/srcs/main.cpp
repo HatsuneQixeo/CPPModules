@@ -52,8 +52,7 @@ void	testMinMax(void)
 		code;\
 		if ((shouldThrow))\
 			std::cout << "Missing exception for "#code"\n";\
-	}\
-	catch (const std::exception &e) {\
+	} catch (const std::exception &e) {\
 		if (!(shouldThrow))\
 			std::cout << "Unexpected exception for "#code"\n";\
 	}\
